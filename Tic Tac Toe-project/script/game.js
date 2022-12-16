@@ -33,18 +33,19 @@ function checkWinner(){
     {  
           if(gameData[i][0]>0 &&
             gameData[i][0] === gameData[i][1] &&
-            gameData[i][1] === gameData[i][2])
+            gameData[i][1] === gameData[i][2]){
             console.log(gameData[i][1])
             return gameData[i][0];
+          }
     }
     //COLUMN EQUALITY
     for(let i=0;i<3;i++)
     {  
           if(gameData[0][i]>0 &&
             gameData[0][i] === gameData[1][i] &&
-            gameData[1][i] === gameData[2][i])
+            gameData[1][i] === gameData[2][i]){
             console.log(gameData[1][i])
-            return gameData[1][i];
+            return gameData[1][i];}
     }
     //DIAGONAL CHECK : top-left to bottom-right 
     if(gameData[0][0]>0 && gameData[0][0] === gameData[1][1] &&gameData[2][2] === gameData[1][1]){
